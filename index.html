@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/style.css" >
     <title>Document</title>
 </head>
 <body>
+    <div id="dealer" class="hand"> 
+        <div id="D1" class="card">B</div>
+        <div id="D2" class="card">B</div>
+        <div id="D3" class="card">B</div>
+        <div id="D4" class="card">B</div>
+        <div id="D5" class="card">B</div>
+        <div id="D6" class="card">B</div>
+        <div id="D7" class="card">B</div>
+        <button id="dealer-stay-button" onclick="dealerStay()">Stay</button>
+        <button id="dealer-hit-button" onclick="dealerHit()">Hit</button>
+</div>
+    <div id="player" class="hand">
+        <div id="P1" class="card">B</div>
+        <div id="P2" class="card">B</div>
+        <div id="P3" class="card">B</div>
+        <div id="P4" class="card">B</div>
+        <div id="P5" class="card">B</div>
+        <div id="P6" class="card">B</div>
+        <div id="P7" class="card">B</div>
+        <button id="player-stay-button" onclick="playerStay()">Stay</button>
+        <button id="player-hit-button" onclick="playerHit()">Hit</button>
+    </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,15 @@
+.hand{
+    border: 2px solid black;
+}
+
+.card{
+    border: 2px solid green;
+    display: inline-block;
+    width: 10vw;
+    height: 16vw;
+}
+
+.card:hover{ 
+ box-shadow: 2px 2px 8px 3px #333; 
+}
+

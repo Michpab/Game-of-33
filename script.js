@@ -1,14 +1,34 @@
-const players=[{name:"John",Cards:[]},{name:"Jack",Cards:[]} ]
-const deck=[1,2,3,4,5,6,8,9,10]
-function dealCards(){
-for (let i=0;i<2;i++){
-for (let x=0;x<players.length;x++){
-let card=deck.pop();
-players[x].Cards.push(card);
-// renderDeck(deck,x);
+var playerCount = 0;
+var dealerCount = 0;
 
-// updatePoints();
+
+function draw(){
+    return parseInt(Math.random() * 10 + 1)
 }
+
+
+function playerStay(){
+    alert("Player Stays");
 }
+
+function playerHit(){
+    playerCount=playerCount + 1;
+    let card = draw();
+    document.getElementById("P" + playerCount).innerHTML = card;
 }
-dealCards();
+    
+
+
+
+function dealerStay(){
+    alert("Dealer Stay");
+}
+
+function dealerHit(){
+    dealerCount=dealerCount + 1;
+    let card = draw();
+    document.getElementById("D" + dealerCount).innerHTML = card;
+}  
+    
+ 
+
