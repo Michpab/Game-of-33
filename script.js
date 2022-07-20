@@ -1,11 +1,41 @@
 var playerCount = 0;
 var dealerCount = 0;
+var playerScore = 0;
+var dealerScore = 0;
+var deck = [];
 
-function draw()
-var values = ["1","2", "3", "4", "5", "6", "7", "8", "9", "10"];
-var deck = new Array();
-var players = new Array();
-var currentPlayer = 0;
+
+
+// function draw()
+// var values = ["1","2", "3", "4", "5", "6", "7", "8", "9", "10"];
+// var deck = new Array();
+// var players = new Array();
+// var currentPlayer = 0;
+
+function shuffle(){
+    deck = [];
+    for(let i=0;i<4;i++){
+        for(let j=1;j<=10;j++){
+            deck.push(j);
+        }
+
+    }
+    for (let i=0;i<deck.length;i++){
+        let swapIndex = parseInt(Math.random()*deck.length);
+        let card1 = deck[i];
+        let card2 = deck[swapIndex];
+        deck[i] = card2;
+        deck[swapIndex] = card1;
+    }
+}
+
+function draw(){
+    if(deck.length == 0){
+        shuffle();
+    }
+    let drawCard = deck.pop();
+    return deck.pop();
+}
 
 function createDeck(){
 deck = new Array();
