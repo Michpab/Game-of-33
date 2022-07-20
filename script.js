@@ -4,14 +4,6 @@ var playerScore = 0;
 var dealerScore = 0;
 var deck = [];
 
-
-
-// function draw()
-// var values = ["1","2", "3", "4", "5", "6", "7", "8", "9", "10"];
-// var deck = new Array();
-// var players = new Array();
-// var currentPlayer = 0;
-
 function shuffle(){
     deck = [];
     for(let i=0;i<4;i++){
