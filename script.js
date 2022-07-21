@@ -64,5 +64,15 @@ function swapPlayerCard(index){
     document.getElementById("PScore").innerHTML = playerScore;
 } 
 
+function swapDealerCard(index){
+    let card = document.getElementById("P" + index).innerHTML;
+    playerScore = dealerScore - card;
+    card = -card;
+    document.getElementById("D" + index).innerHTML = card;
+    dealerScore = dealerScore + card;
+    document.getElementById("DScore").innerHTML = dealerScore;
+}
+
+
 
 
