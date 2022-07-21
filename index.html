@@ -11,18 +11,18 @@
 <h1> Game - Of - 33</h1>
     
     <div id="dealer" class="hand"> 
-        <div class="card"><h2 id="D1">B</h2><button class="swap-button" onclick="swapDealerCard(1)">Swap</button></div>
-        <div class="card"><h2 id="D2">B</h2><button class="swap-button" onclick="swapDealerCard(2)">Swap</button></div>
-        <div class="card"><h2 id="D3">B</h2><button class="swap-button" onclick="swapDealerCard(3)">Swap</button></div>
-        <div class="card"><h2 id="D4">B</h2><button class="swap-button" onclick="swapDealerCard(4)">Swap</button></div>
-        <div class="card"><h2 id="D5">B</h2><button class="swap-button" onclick="swapDealerCard(5)">Swap</button></div>
-        <div class="card"><h2 id="D6">B</h2><button class="swap-button" onclick="swapDealerCard(6)">Swap</button></div>
-        <div class="card"><h2 id="D7">B</h2><button class="swap-button" onclick="swapDealerCard(7)">Swap</button></div>
-        <div class="card"><h2 id="D8">B</h2><button class="swap-button" onclick="swapDealerCard(8)">Swap</button></div>
+        <div class="card"><h2 id="D1">B</h2></div>
+        <div class="card"><h2 id="D2">B</h2></div>
+        <div class="card"><h2 id="D3">B</h2></div>
+        <div class="card"><h2 id="D4">B</h2></div>
+        <div class="card"><h2 id="D5">B</h2></div>
+        <div class="card"><h2 id="D6">B</h2></div>
+        <div class="card"><h2 id="D7">B</h2></div>
+        <div class="card"><h2 id="D8">B</h2></div>
         <div id="DScore" class="score">0</div>
-       <button id="dealer-stay-button" onclick="dealerStay()">Stay</button>
+        <button id="dealer-stay-button" onclick="dealerStay()">Stay</button>
         <button id="dealer-hit-button" onclick="dealerHit()">Hit</button>
-</div>
+    </div>
     <div id="player" class="hand">
         <div class="card"><h2 id="P1">B</h2><button class="swap-button" onclick="swapPlayerCard(1)">Swap</button></div>
         <div class="card"><h2 id="P2">B</h2><button class="swap-button" onclick="swapPlayerCard(2)">Swap</button></div>
@@ -35,11 +35,9 @@
         <div id="PScore" class="score">0</div>
         <button id="player-stay-button" onclick="playerStay()">Stay</button>
         <button id="player-hit-button" onclick="playerHit()">Hit</button>
-        
-
-    </div>
-
-    <script src="script.js"></script>
+  </div>
+  <p id="results"></p>   
+  <script src="script.js"></script>
     
 </body>
 </html>

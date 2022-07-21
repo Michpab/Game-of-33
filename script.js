@@ -31,7 +31,8 @@ function draw(){
 }
 
 function playerStay(){
-alert("Player Stays");
+    dealerPlays();
+    results();
 }
 
 function playerHit(){
@@ -44,7 +45,7 @@ document.getElementById("PScore").innerHTML = playerScore;
 
 
 function dealerStay(){
-alert("Dealer Stay");
+
 }
 
 function dealerHit(){
@@ -72,6 +73,32 @@ function swapDealerCard(index){
     dealerScore = dealerScore + card;
     document.getElementById("DScore").innerHTML = dealerScore;
 }
+
+function results(){
+    let message = "";
+    let pdist = 33-playerScore;
+    if (pdist < 0){
+        pdist = -pdist
+    }
+
+    let ddist = 33-dealerScore;
+    if (ddist < 0){
+        ddist = -ddist
+    }
+
+    if( pdist > ddist){
+        message="You Lose!";
+    }
+    else if (pdist < ddist){
+        message="You Win!";
+    }
+    else if (pdist == ddist){
+        message = "Tie";
+    }
+    document.getElementById ("results").innerHTML = message;   
+}
+
+
 
 
 
