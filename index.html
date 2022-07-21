@@ -11,26 +11,32 @@
 <h1> Game - Of - 33</h1>
     
     <div id="dealer" class="hand"> 
-        <div id="D1" class="card">B</div>
-        <div id="D2" class="card">B</div>
-        <div id="D3" class="card">B</div>
-        <div id="D4" class="card">B</div>
-        <div id="D5" class="card">B</div>
-        <div id="D6" class="card">B</div>
-        <div id="D7" class="card">B</div>
+        <div class="card"><h2 id="D1">B</h2><button class="swap-button" onclick="swapDealerCard(1)">Swap</button></div>
+        <div class="card"><h2 id="D2">B</h2><button class="swap-button" onclick="swapDealerCard(2)">Swap</button></div>
+        <div class="card"><h2 id="D3">B</h2><button class="swap-button" onclick="swapDealerCard(3)">Swap</button></div>
+        <div class="card"><h2 id="D4">B</h2><button class="swap-button" onclick="swapDealerCard(4)">Swap</button></div>
+        <div class="card"><h2 id="D5">B</h2><button class="swap-button" onclick="swapDealerCard(5)">Swap</button></div>
+        <div class="card"><h2 id="D6">B</h2><button class="swap-button" onclick="swapDealerCard(6)">Swap</button></div>
+        <div class="card"><h2 id="D7">B</h2><button class="swap-button" onclick="swapDealerCard(7)">Swap</button></div>
+        <div class="card"><h2 id="D8">B</h2><button class="swap-button" onclick="swapDealerCard(8)">Swap</button></div>
+        <div id="DScore" class="score">0</div>
         <button id="dealer-stay-button" onclick="dealerStay()">Stay</button>
         <button id="dealer-hit-button" onclick="dealerHit()">Hit</button>
 </div>
     <div id="player" class="hand">
-        <div id="P1" class="card">B</div>
-        <div id="P2" class="card">B</div>
-        <div id="P3" class="card">B</div>
-        <div id="P4" class="card">B</div>
-        <div id="P5" class="card">B</div>
-        <div id="P6" class="card">B</div>
-        <div id="P7" class="card">B</div>
+        <div class="card"><h2 id="P1">B</h2><button class="swap-button" onclick="swapPlayerCard(1)">Swap</button></div>
+        <div class="card"><h2 id="P2">B</h2><button class="swap-button" onclick="swapPlayerCard(2)">Swap</button></div>
+        <div class="card"><h2 id="P3">B</h2><button class="swap-button" onclick="swapPlayerCard(3)">Swap</button></div>
+        <div class="card"><h2 id="P4">B</h2><button class="swap-button" onclick="swapPlayerCard(4)">Swap</button></div>
+        <div class="card"><h2 id="P5">B</h2><button class="swap-button" onclick="swapPlayerCard(5)">Swap</button></div>
+        <div class="card"><h2 id="P6">B</h2><button class="swap-button" onclick="swapPlayerCard(6)">Swap</button></div>
+        <div class="card"><h2 id="P7">B</h2><button class="swap-button" onclick="swapPlayerCard(7)">Swap</button></div>
+        <div class="card"><h2 id="P8">B</h2><button class="swap-button" onclick="swapPlayerCard(8)">Swap</button></div>
+        <div id="PScore" class="score">0</div>
         <button id="player-stay-button" onclick="playerStay()">Stay</button>
         <button id="player-hit-button" onclick="playerHit()">Hit</button>
+        
+
     </div>
 
     <script src="script.js"></script>

@@ -27,29 +27,42 @@ function draw(){
     }
     let drawCard = deck.pop();
     return deck.pop();
-}
-
-function createDeck(){
-deck = new Array();
-for (var i = 0 ; i < values.length; i++)
-deck.push(card);
+    
 }
 
 function playerStay(){
 alert("Player Stays");
 }
+
 function playerHit(){
 playerCount=playerCount + 1;
 let card = draw();
-document.getElementById("P" + playerCount).innerHTML = card;}
+playerScore = playerScore + card;
+document.getElementById("P" + playerCount).innerHTML = card;
+document.getElementById("PScore").innerHTML = playerScore;
+}
+
+
 function dealerStay(){
 alert("Dealer Stay");
 }
+
 function dealerHit(){
-dealerCount=dealerCount + 1;
-let card = draw();
-document.getElementById("D" + dealerCount).innerHTML = card;
-}  
-    
- 
+    dealerCount=dealerCount + 1;
+    let card = draw();
+    dealerScore = dealerScore + card;
+    document.getElementById("D" + dealerCount).innerHTML = card;
+    document.getElementById("DScore").innerHTML = dealerScore;
+}
+
+function swapPlayerCard(index){
+    let card = document.getElementById("P" + index).innerHTML;
+    playerScore = playerScore - card;
+    card = -card;
+    document.getElementById("P" + index).innerHTML = card;
+    playerScore = playerScore + card;
+    document.getElementById("PScore").innerHTML = playerScore;
+} 
+
+
 
