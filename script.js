@@ -26,7 +26,7 @@ function draw(){
         shuffle();
     }
     let drawCard = deck.pop();
-    return deck.pop();
+    return drawCard;
     
 }
 
@@ -35,19 +35,27 @@ function playerStay(){
     results();
 }
 
+function dealerPlays(){
+    while (dealerCount < 8 && dealerScore < 33){
+        dealerHit();
+
+    }
+
+}
+
+
+
+// Runs when "Hit" button is clicked by player
 function playerHit(){
+    if (playerCount<8){
 playerCount=playerCount + 1;
 let card = draw();
 playerScore = playerScore + card;
 document.getElementById("P" + playerCount).innerHTML = card;
 document.getElementById("PScore").innerHTML = playerScore;
 }
-
-
-function dealerStay(){
-
 }
-
+    
 function dealerHit(){
     dealerCount=dealerCount + 1;
     let card = draw();
@@ -56,15 +64,18 @@ function dealerHit(){
     document.getElementById("DScore").innerHTML = dealerScore;
 }
 
+
+
 function swapPlayerCard(index){
     let card = document.getElementById("P" + index).innerHTML;
+    if(card!='B'){
     playerScore = playerScore - card;
     card = -card;
     document.getElementById("P" + index).innerHTML = card;
     playerScore = playerScore + card;
     document.getElementById("PScore").innerHTML = playerScore;
 } 
-
+}
 function swapDealerCard(index){
     let card = document.getElementById("P" + index).innerHTML;
     playerScore = dealerScore - card;
