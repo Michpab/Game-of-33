@@ -16,7 +16,7 @@ Whoever has the closest distance to 33 wins. If the dealer's distance > the play
 In the event of negative  numbers(-) (e.g.- a score of 40 ,so 33 - 40= -7),we will negate it to flip it to positive numbers(+).
 If the dealer and the player has the same distance then its a tie. Tie score will work across  positive(+) and negative(-) results for as long as they have the same distance (e.g.-player has 32, dealer has 34- it's still a tie).
 
-
+Index HTML uses script.js and css/style.css.
 
 
 
