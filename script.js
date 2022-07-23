@@ -96,7 +96,7 @@ function results(){
         message="You Win!";
     }
     else if (pdist == ddist){
-        message = "Tie";
+        message = "Tie!";
     }
     document.getElementById ("results").innerHTML = message;   
 }
