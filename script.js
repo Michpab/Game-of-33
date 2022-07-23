@@ -4,13 +4,13 @@ var playerScore = 0;
 var dealerScore = 0;
 var deck = [];
 
+
 function shuffle(){
     deck = [];
     for(let i=0;i<4;i++){
         for(let j=1;j<=10;j++){
             deck.push(j);
         }
-
     }
     for (let i=0;i<deck.length;i++){
         let swapIndex = parseInt(Math.random()*deck.length);
@@ -21,33 +21,19 @@ function shuffle(){
     }
 }
 
+
 function draw(){
     if(deck.length == 0){
         shuffle();
     }
     let drawCard = deck.pop();
     return drawCard;
-    
-}
-
-function playerStay(){
-    dealerPlays();
-    results();
-}
-
-function dealerPlays(){
-    while (dealerCount < 8 && dealerScore < 33){
-        dealerHit();
-
     }
-
-}
-
 
 
 // Runs when "Hit" button is clicked by player
 function playerHit(){
-    if (playerCount<8){
+    if (playerCount<9){
 playerCount=playerCount + 1;
 let card = draw();
 playerScore = playerScore + card;
@@ -56,15 +42,6 @@ document.getElementById("PScore").innerHTML = playerScore;
 }
 }
     
-function dealerHit(){
-    dealerCount=dealerCount + 1;
-    let card = draw();
-    dealerScore = dealerScore + card;
-    document.getElementById("D" + dealerCount).innerHTML = card;
-    document.getElementById("DScore").innerHTML = dealerScore;
-}
-
-
 
 function swapPlayerCard(index){
     let card = document.getElementById("P" + index).innerHTML;
@@ -76,14 +53,29 @@ function swapPlayerCard(index){
     document.getElementById("PScore").innerHTML = playerScore;
 } 
 }
-function swapDealerCard(index){
-    let card = document.getElementById("P" + index).innerHTML;
-    playerScore = dealerScore - card;
-    card = -card;
-    document.getElementById("D" + index).innerHTML = card;
+
+
+function playerStay(){
+    dealerPlays();
+    results();
+}
+
+
+function dealerPlays(){
+    while (dealerCount < 9 && dealerScore < 33){
+        dealerHit();
+    }
+}
+
+
+function dealerHit(){
+    dealerCount=dealerCount + 1;
+    let card = draw();
     dealerScore = dealerScore + card;
+    document.getElementById("D" + dealerCount).innerHTML = card;
     document.getElementById("DScore").innerHTML = dealerScore;
 }
+
 
 function results(){
     let message = "";
