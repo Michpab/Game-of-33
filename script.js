@@ -90,13 +90,13 @@ function results(){
     }
 
     if( pdist > ddist){
-        message="You Lose!";
+        message="You Lose!!!";
     }
     else if (pdist < ddist){
-        message="You Win!";
+        message="You Win!!!";
     }
     else if (pdist == ddist){
-        message = "Tie!";
+        message = "Tie!!!";
     }
     document.getElementById ("results").innerHTML = message;   
 }

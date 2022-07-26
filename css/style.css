@@ -1,4 +1,7 @@
-h1 {text-align: center;}
+h1 {text-align: center;
+    font-size: 40pt;
+
+}
 
 .hand{
     border: 2px solid black;
@@ -18,12 +21,12 @@ h1 {text-align: center;}
 }
 
 .score{
-    font-size: 28pt;
+    font-size: 35pt;
 }
 
 
 p{
-    font-size: 32pt;
+    font-size: 35pt;
     text-align: center;
 }
 
